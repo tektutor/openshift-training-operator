@@ -25,11 +25,11 @@ import (
 
 // TrainingSpec defines the desired state of Training
 type TrainingSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of Training. Edit training_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Topic    string `json:"topic,omitempty"`
+	City     string `json:"city,omitempty"`
+	Duration string `json:"duration,omitempty"`
+	FromDate string `json:"fromDate,omitempty"`
+	ToDate   string `json:"toDate,omitempty"`
 }
 
 // TrainingStatus defines the observed state of Training
