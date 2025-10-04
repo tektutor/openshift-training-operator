@@ -43,5 +43,7 @@ ln -s $(which kustomize) /root/openshift-training-operator/bin/kustomize
 
 
 make install
+kubectl get crd | grep training
+make deploy
 
 ```
