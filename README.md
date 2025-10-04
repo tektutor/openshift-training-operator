@@ -27,7 +27,19 @@ source ~/.bashrc
 controller-gen --version
 
 go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.7.0
+mkdir -p /root/openshift-training-operator/bin
+ln -s $(which controller-gen) /root/openshift-training-operator/bin/controller-gen
+# Install latest stable Kustomize (v5.x is fine)
+go install sigs.k8s.io/kustomize/kustomize/v4@v4.5.7
 
+# Verify installation
+kustomize version
+
+# Create bin directory inside your project if not exists
+mkdir -p /root/openshift-training-operator/bin
+
+# Symlink your global kustomize to the project bin
+ln -s $(which kustomize) /root/openshift-training-operator/bin/kustomize
 
 
 make install
