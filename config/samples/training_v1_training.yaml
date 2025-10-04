@@ -1,6 +1,10 @@
 apiVersion: training.tektutor.org/v1
 kind: Training
 metadata:
-  name: training-sample
+  name: go-operator-training
 spec:
-  # TODO(user): Add fields here
+  topic: "Go Operator Development"
+  fromDate: "2025-10-20"
+  toDate: "2025-10-24"
+  duration: "5 days"
+  city: "Bangalore"
