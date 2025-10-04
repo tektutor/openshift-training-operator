@@ -45,5 +45,6 @@ ln -s $(which kustomize) /root/openshift-training-operator/bin/kustomize
 make install
 kubectl get crd | grep training
 make deploy
+kubectl get pods -n openshift-custom-operator-system
 
 ```
