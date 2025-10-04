@@ -48,5 +48,7 @@ make deploy
 kubectl get pods -n openshift-custom-operator-system
 kubectl logs -n openshift-custom-operator-system deploy/openshift-custom-operator-controller-manager -c manager
 kubectl apply -f config/samples/training_v1_training.yaml
-
+kubectl get trainings.training.tektutor.org
+kubectl describe training go-operator-training
+kubectl logs -n openshift-custom-operator deploy/openshift-custom-operator-controller-manager
 ```
