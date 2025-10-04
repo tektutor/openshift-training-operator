@@ -13,6 +13,7 @@ export PATH=$PATH:/usr/local/go/bin
 export RELEASE_VERSION=v1.34.1
 curl -LO https://github.com/operator-framework/operator-sdk/releases/download/${RELEASE_VERSION}/operator-sdk_linux_amd64
 sudo install -m 755 operator-sdk_linux_amd64 /usr/local/bin/operator-sdk
+sudo apt install -y make
 ```
 
 ## Create a training operator
