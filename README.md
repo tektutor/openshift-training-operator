@@ -20,6 +20,16 @@ sudo apt install -y make
 ```
 operator-sdk init --domain tektutor.org --repo github.com/tektutor/training-operator
 operator-sdk create api --group training --version v1 --kind Training --resource --controller
+
+export PATH=$PATH:$(go env GOPATH)/bin
+echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
+source ~/.bashrc
+controller-gen --version
+
+go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.7.0
+
+
+
 make install
 
 ```
