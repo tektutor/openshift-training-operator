@@ -1,0 +1,6 @@
+apiVersion: training.tektutor.org/v1
+kind: Training
+metadata:
+  name: training-sample
+spec:
+  # TODO(user): Add fields here

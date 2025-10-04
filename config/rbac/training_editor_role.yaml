@@ -1,0 +1,24 @@
+# permissions for end users to edit trainings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: training-editor-role
+rules:
+- apiGroups:
+  - training.tektutor.org
+  resources:
+  - trainings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - training.tektutor.org
+  resources:
+  - trainings/status
+  verbs:
+  - get
